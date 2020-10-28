@@ -1,0 +1,15 @@
+configuration {
+	/* @import "~/.cache/wal/colors-rofi-dark"; */
+	show-icons: false;
+	modi: "drun,run,window,ssh";
+	theme: "nord-custom";
+	line-padding: 10;
+	padding: 0;
+	lines: 7;
+	bw: 0;
+	matching: "fuzzy";
+	separator-style: none;
+	line-margin: 0;
+	opacity: 0;
+	font: "Iconsolata 24";
+}

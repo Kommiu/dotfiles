@@ -1,0 +1,123 @@
+[bar/main]
+monitor = HDMI2
+width = 100%
+height = 35 
+bottom = false
+padding-left = 1
+padding-right = 1
+line-size = 5
+wm-restack=bspwm
+
+background = #60000000
+foreground = #FFFFFF
+
+font-0 = FiraMono:style=Regular:size=9;1
+font-2 = Dina:style=Regular:pixelsize=13;1
+font-1 = Font Awesome 5 Brands:fontformat=truetype:size=10;1
+font-3 = Font Awesome 5 Free:fontformat=truetype:size=10;1
+font-4 = FontAwesome:fontformat=truetype;size=10;
+Brands:fontformat=truetype:size=8;1
+
+wm-name = topbar
+
+modules-left = bspwm
+modules-center = date
+modules-right = volume 
+
+tray-position = right
+;tray-transparent = true
+
+
+[bar/second]
+inherit = bar/main
+modules-left = bspwm
+modules-right = time
+modules-center = 
+monitor = eDP1
+
+[colors]
+;background = ${xrdb:color0:#222}
+background = #222
+background-alt = #444
+;foreground = ${xrdb:color7:#222}
+foreground = #dfdfdf
+foreground-alt = #555
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+[module/date]
+type = custom/script
+exec = echo "  $(date +'%I:%M  %A %d %B')"
+interval = 1
+click-left = gnome-calendar
+ 
+
+[module/song]
+type = custom/script
+exec = mpc | head -1
+interval = 2
+click-left = mpc toggle
+
+[module/volume]
+type = internal/alsa
+
+format-volume = <label-volume> <bar-volume>
+label-volume = VOL
+label-volume-foreground = ${root.foreground}
+
+format-muted-prefix = " "
+format-muted-foreground = ${colors.foreground-alt}
+label-muted = sound muted
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+
+[module/bspwm]
+type = internal/bspwm
+
+pin-workspaces = true
+format = <label-state> #<label-mode>
+
+
+label-visible-underline = #FFFFFF
+label-focused = %icon%
+label-focused-foreground = #FFFFFF
+label-focused-underline = #FFFFFF
+label-focused-padding = 2
+
+label-occupied = %icon%
+label-occupied-foreground = #C0C3CA
+label-occupied-underline = #60000000
+label-occupied-padding = 2
+
+label-empty = %icon%
+label-empty-foreground = #000000
+label-empty-underline = #60000000
+label-empty-padding = 2
+
+ws-icon-0 = 0;0
+ws-icon-1 = 1;1
+ws-icon-2 = 2;2
+ws-icon-3 = 3;3
+ws-icon-4 = 4;4
+ws-icon-5 = 5;5
+ws-icon-6 = 6;6
+ws-icon-7 = 7;7
+ws-icon-8 = 8;8
+ws-icon09 = 9;9
+

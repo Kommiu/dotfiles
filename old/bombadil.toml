@@ -1,0 +1,24 @@
+# Path to your dotfiles relative to your $HOME directory
+dotfiles_dir = "dotfiles/old"
+
+[settings]
+# An array of toml files paths containing the variables to inject in your templatize dotfiles
+# You can have multiple var files as long as variable names does not colide. 
+vars = [ "vars.toml" ]
+
+# An array of post install shell commands
+hooks = [ "bspc wm -r", "bspc monitor HDMI2 -s eDP1 "]
+
+[settings.dots]
+# A dot entry representing a symlink, `source` is relative to `dotfiles_dir` 
+# and `target` shall be relative to $HOME directory or absolute.
+alacritty = { source = "alacritty", target=".config/alacritty" }
+bspwm = { source = "bspwm", target = ".config/bspwm" }
+conky = { source = "conky", target = ".config/conky" }
+picom = { source = "picom", target = ".config/picom" }
+polybar = { source = "polybar", target = ".config/polybar" }
+rofi = {source = "rofi", target = ".config/rofi" }
+sxhkd = { source = "sxhkd", target = ".config/sxhkd" }
+tmux = { source = "tmux.conf", target = ".tmux.conf" }
+Xres = { source = "Xresources", target = ".Xresources" }
+zshrc = { source = "zshrc", target = ".zshrc" }

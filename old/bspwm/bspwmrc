@@ -1,0 +1,42 @@
+#! /bin/sh
+export XDG_CURRENT_DESKTOP=X-Generic
+xsetroot -cursor_name left_ptr
+xrdb ~/.Xresources
+picom --config ~/.config/compton/compton.conf&
+$HOME/.config/polybar/launch.sh&
+#polybar second &
+~/.fehbg &
+conky &
+sxhkd &
+~/fixshift &
+wmname LG3D&
+
+bspc config border_width         0
+bspc config normal_border_color  "#191919"
+bspc config focused_border_color "#2F2F2F"
+bspc config window_gap           15
+
+bspc config split_ratio          0.5
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+bspc config focus_by_distance    true
+bspc config history_aware_focus  true
+bspc config click_to_focus       true
+
+bspc config pointer_mod mod1
+bspc config pointer_action1 move
+
+bspc monitor HDMI2 -d 1 2 3 4 5 6 7 8
+bspc monitor eDP1 -d 8 0
+# bspc monitor eDP1 -s HDMI2
+
+bspc config top_padding 30
+bspc config bottom_padding 0
+bspc config left_padding 0
+bspc config right_padding 0
+
+bspc rule -a Gnome-calendar state=floating
+bspc rule -a urxvt state=floating
+bspc rule -a lattedock state=floating border=off
+bspc rule -a Chromium desktop='^1'
+bspc rule -a Firefox descktop='^2'
