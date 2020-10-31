@@ -2,7 +2,7 @@
 export XDG_CURRENT_DESKTOP=X-Generic
 xsetroot -cursor_name left_ptr
 xrdb ~/.Xresources
-picom --config ~/.config/compton/compton.conf&
+picom --config ~/.config/picom/picom.conf&
 $HOME/.config/polybar/launch.sh&
 #polybar second &
 ~/.fehbg &

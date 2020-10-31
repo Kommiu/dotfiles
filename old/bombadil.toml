@@ -21,4 +21,3 @@ rofi = {source = "rofi", target = ".config/rofi" }
 sxhkd = { source = "sxhkd", target = ".config/sxhkd" }
 tmux = { source = "tmux.conf", target = ".tmux.conf" }
 Xres = { source = "Xresources", target = ".Xresources" }
-zshrc = { source = "zshrc", target = ".zshrc" }

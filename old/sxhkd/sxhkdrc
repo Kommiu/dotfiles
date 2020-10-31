@@ -28,22 +28,13 @@ super + BackSpace
 shift + @Print
 	maim -s --format png /dev/stdout | xclip -selection clipboard -t image/png -i  	
 
-super + Up
-    ~/.scripts/volume-up.sh
-
-super + Down
-	~/.scripts/volume-down.sh
-
-super + Right
-    mpc next >/dev/null
-
 #
 # bspwm hotkeys
 #
 
 # quit bspwm normally
-super + alt + Escape
-	bspc quit
+super + shift + {q,r}
+	bspc {quit, wm -r}
 
 # close and kill
 super + {_,shift + }w
@@ -70,8 +61,8 @@ super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
-super + ctrl + {x,y,z}
-	bspc node -g {locked,sticky,private}
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
 
 #
 # focus/swap

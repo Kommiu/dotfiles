@@ -91,3 +91,4 @@
     background-color: @nord8;
     text-color: @nord4;
 }
+/* vim:ft=css
