@@ -24,6 +24,7 @@ gtkrc = { source = "config/gtkrc", target = ".config/gtkrc" }
 gtkrc2 = { source = "config/gtkrc-2.0", target = ".config/gtkrc-2.0" }
 sxhkd = { source = "config/sxhkd", target = ".config/sxhkd" }
 rofi = { source = "config/rofi", target = ".config/rofi" }
+arandr = {source = "config/autorandr", target = ".config/autorandr" }
 
 themes = { source = "themes", target = ".themes" }
 icons = { source = "icons", target=".icons" } 
