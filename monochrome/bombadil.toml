@@ -30,4 +30,4 @@ themes = { source = "themes", target = ".themes" }
 icons = { source = "icons", target=".icons" } 
 img = { source = "img", target = "img" }
 tmux = { source = "tmux.conf", target = ".tmux.conf" }
-
+zshrc = { source = "zshrc", target = ".zshrc" }
